@@ -48,6 +48,13 @@
                         clientditel['total']=` Youer module is : ${clientditel.module} Youer Budget is :${clientditel['budget']*clientditel['module']}`;
                     }
 
+                    localStorage.setItem('id',clientditel.id);
+                    localStorage.setItem('clientname',clientditel.cname);
+                    localStorage.setItem('projectname',clientditel.pname);
+                    localStorage.setItem('budget',clientditel.budget);
+                    localStorage.setItem('module',clientditel.module);
+                    localStorage.setItem('total',clientditel.module*clientditel.budget);
+
 
                     clinetdata.push(clientditel);
 
@@ -93,7 +100,7 @@
     </script>
 </head>
 <body>
-<input type="button" id="showbtn" value="Show"> <input type="button" value="View" id="viewbtn">
+<input type="button" id="showbtn" value="Show" class="btn"> <input type="button" value="View" id="viewbtn" class="btn">
 <div id="pr">
     <h1>Add New Budget</h1>
     <form >
